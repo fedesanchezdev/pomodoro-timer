@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Pomodoro Timer</title>
+</head>
+
+<body>
+    <!-- CUBO -->
+    <div class="container">
+        <div class='cube'>
+            <div class='cube-face five'>5'</div>
+            <div class='cube-face forty'>40'</div>
+            <div class='cube-face ten'>10'</div>
+            <div class='cube-face thirty'>30'</div>
+            <div class='cube-face twenty'>20'</div>
+            <div class='cube-face twenty-five'>25'</div>
+        </div>
+    </div>
+    
+    <div class="inputs">
+        <p class="timerSelection">
+            <input type="radio" name="select-time" id="5" value="5" />   
+            <label for="5">5</label>
+            
+            <input type="radio" name="select-time" id="10" value="10" />  
+            <label for="5">10</label>
+            
+            <input type="radio" name="select-time" id="20" value="20" />
+            <label for="5">20</label>
+
+            <input type="radio" name="select-time" id="25" value="25" />
+            <label for="5">25</label>
+
+            <input type="radio" name="select-time" id="30" value="30" />
+            <label for="5">30</label>
+
+            <input type="radio" name="select-time" id="40" value="40" />
+            <label for="5">40</label>
+        </p>
+    </div>
+
+
+    <!-- Contador -->
+    <div class="tiempo" id="tiempo"></div>
+
+    <!-- Controles -->
+    <div class="buttons">
+        <button id="play" onclick="startTimer()"></button>
+        <button id="stop" onclick="stopTimer()"></button>
+    </div>
+
+    <div class="credits" id="credits">
+        <a href="https://youtu.be/wzR9HwhhlkA" target="_blank">Alarm: "iPhone alarm as a piano ballad" by Tony Ann</a>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
