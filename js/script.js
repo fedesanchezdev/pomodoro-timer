@@ -6,7 +6,7 @@ let alarm = new Audio('./audio/alarm.mp3'); /* Genero la alarma */
 
 timerSelection.addEventListener('click', () => {
     
-    cube.style.transform = `translateY(400px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
+    cube.style.transform = `translateY(400px) rotateX(00deg) rotateY(0deg) rotateZ(0deg)`;
     
     let seleccionado = document.querySelector('input[name=select-time]:checked').value;
     console.log(seleccionado)
@@ -14,21 +14,27 @@ timerSelection.addEventListener('click', () => {
     switch (seleccionado) {
         case "5":
             cube.style.transform = `translateY(400px) rotateX(00deg) rotateY(00deg) rotateZ(00deg)`;
+            clearInterval(repeater);
             break;
         case "10":
             cube.style.transform = `translateY(400px) rotateX(00deg) rotateY(90deg) rotateZ(00deg)`;
+            clearInterval(repeater);
             break;
         case "20":
             cube.style.transform = `translateY(400px) rotateX(-90deg) rotateY(00deg) rotateZ(00deg)`;
+            clearInterval(repeater);
             break;
         case "25":
             cube.style.transform = `translateY(400px) rotateX(90deg) rotateY(00deg) rotateZ(00deg)`;
+            clearInterval(repeater);
             break;
         case "30":
             cube.style.transform = `translateY(400px) rotateX(00deg) rotateY(270deg) rotateZ(00deg)`;
+            clearInterval(repeater);
             break;
         case "40":
             cube.style.transform = `translateY(400px) rotateX(180deg) rotateY(00deg) rotateZ(180deg)`;
+            clearInterval(repeater);
             break;
     }
 });
@@ -72,4 +78,5 @@ function stopTimer(){
     clearInterval(repeater);
     location.reload();
 }
+
 
