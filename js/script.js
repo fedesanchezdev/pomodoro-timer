@@ -2,7 +2,7 @@ const cube = document.querySelector('.cube');
 const timerSelection = document.querySelector('.timerSelection')
 let minutos, segundos, repeater;
 
-let alarm = new Audio('./audio/alarm.mp3'); /* Genero la alarma */
+let alarm = new Audio('./audio/alarm.mp3');
 
 timerSelection.addEventListener('click', () => {
     
@@ -51,10 +51,7 @@ function obtenerMinutos() {
 }
 
 function setTimer() {
-    /* Cambio la hora en pantalla */
     tiempo.innerHTML = `<p class="number">${minutos > 9 ? minutos : ('0' + minutos)}</p><span>:</span><p class="number">${segundos > 9 ? segundos : ('0' + segundos)}</p>`;
-
-    /* Cambio la hora en la pestaña */
     document.title = `${minutos > 9 ? minutos : ('0' + minutos)}:${segundos > 9 ? segundos : ('0' + segundos)}`;
 }
 
@@ -69,7 +66,8 @@ function runner() {
         segundos = 59;
         minutos--;
     } else {
-        alarm.play();
+        playAlarm();
+        clearInterval(repeater);
     }
 setTimer();
 }
@@ -77,6 +75,11 @@ setTimer();
 function stopTimer(){
     clearInterval(repeater);
     location.reload();
+}
+
+function playAlarm(){
+    player.innerHTML = `<audio autoplay loop><source src="./audio/alarm.mp3" type="audio/mpeg"></audio>`;
+    credits.innerHTML = `<a href="https://www.youtube.com/@tonyannmusic/featured" target="_blank">"iPhone alarm as a piano ballad" by Tony Ann<br>subscribe to his channel</a>`;
 }
 
 

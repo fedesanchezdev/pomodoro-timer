@@ -5,63 +5,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-
     <title>Pomodoro Timer</title>
 </head>
 
 <body>
+    <h1>Pom<i class="em em-tomato" aria-role="presentation" aria-label="TOMATO"></i>doro <span style="color: rgb(224, 227, 230); font-size: 40px">Time</span>
+        <i class="em em-clock330" aria-role="presentation" aria-label="CLOCK FACE THREE-THIRTY"></i>
+    </h1>
 
-    <h1>Pomodoro Timer</h1>
     <!-- CUBO -->
     <div class="container">
-        <div class='cube'>
-            <div class='cube-face five'>5'</div>
-            <div class='cube-face forty'>40'</div>
-            <div class='cube-face ten'>10'</div>
-            <div class='cube-face thirty'>30'</div>
-            <div class='cube-face twenty'>20'</div>
-            <div class='cube-face twenty-five'>25'</div>
+        <div class="cube">
+            <div class="cube-face five">5'</div>
+            <div class="cube-face forty">40'</div>
+            <div class="cube-face ten">10'</div>
+            <div class="cube-face thirty">30'</div>
+            <div class="cube-face twenty">20'</div>
+            <div class="cube-face twenty-five">25'</div>
         </div>
     </div>
-    
+
     <div class="inputs">
+        <p class="minutes-selector">minutes <i class="em em-alarm_clock" aria-role="presentation" aria-label="ALARM CLOCK"></i> selector</p>
         <p class="timerSelection">
-            <input type="radio" name="select-time" id="5" value="5" checked/>   
-            <label for="5">5</label>
-            
-            <input type="radio" name="select-time" id="10" value="10" />  
-            <label for="10">10</label>
-            
-            <input type="radio" name="select-time" id="20" value="20" />
-            <label for="20">20</label>
-
-            <input type="radio" name="select-time" id="25" value="25" />
-            <label for="25">25</label>
-
-            <input type="radio" name="select-time" id="30" value="30" />
-            <label for="30">30</label>
-
-            <input type="radio" name="select-time" id="40" value="40" />
-            <label for="40">40</label>
+            <label for="5"><input type="radio" name="select-time" id="5" value="0" checked /> 5</label>
+            <label for="10"><input type="radio" name="select-time" id="10" value="10" /> 10</label>
+            <label for="20"><input type="radio" name="select-time" id="20" value="20" /> 20</label>
+            <label for="25"><input type="radio" name="select-time" id="25" value="25" /> 25</label>
+            <label for="30"><input type="radio" name="select-time" id="30" value="30" /> 30</label>
+            <label for="40"><input type="radio" name="select-time" id="40" value="40" /> 40</label>
         </p>
     </div>
+    <!-- A implementar en la v3.0 -->
+    <!-- <div class="alarm">
+        <label for="">alarm selector</label>
+        <select>
+            <option value="01">iPhone Balade</option>
+            <option value="02">iPhone Waterfalls</option>
+        </select>
+    </div> -->
 
+    <div id="player" class="player"></div>
 
     <!-- Contador -->
     <div class="tiempo" id="tiempo"></div>
 
-    <h4>Elige Alarma</h4>
-    
     <!-- Controles -->
     <div class="buttons">
         <button id="play" onclick="startTimer()"></button>
         <button id="stop" onclick="stopTimer()"></button>
     </div>
 
-    <div class="credits" id="credits">
-        <a href="https://youtu.be/wzR9HwhhlkA" target="_blank">Alarm: "iPhone alarm as a piano ballad" by Tony Ann</a>
-    </div>
+    <div class="credits" id="credits"></div>
 
     <script src="./js/script.js"></script>
 </body>
