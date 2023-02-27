@@ -72,16 +72,20 @@ function runner() {
 setTimer();
 }
 
-function stopTimer(){
+function stopTimer() {
     clearInterval(repeater);
     location.reload();
 }
 
-function playAlarm(){
-    document.getElementById("player").muted = false;
-    player.innerHTML = `<audio autoplay controls loop muted playsinline><source src="./audio/alarm.mp3" type="audio/mpeg"></audio>`;
-    
+function playAlarm() {
+    player.innerHTML = `<audio id = "player2" autoplay controls loop playsinline muted><source src="./audio/alarm.mp3" type="audio/mpeg"></audio>`;
     credits.innerHTML = `<a href="https://www.youtube.com/@tonyannmusic/featured" target="_blank">"iPhone alarm as a piano ballad" by Tony Ann<br>subscribe to his channel</a>`;
+    toggleMute();
+}
+
+function toggleMute() {
+    var audioAlarm = document.getElementById("player2");
+    audioAlarm.muted = !audioAlarm.muted;
 }
 
 
