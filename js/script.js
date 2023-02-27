@@ -80,7 +80,7 @@ function stopTimer() {
 function playAlarm() {
     player.innerHTML = `<audio id = "player2" autoplay controls loop playsinline muted><source src="./audio/alarm.mp3" type="audio/mpeg"></audio>`;
     credits.innerHTML = `<a href="https://www.youtube.com/@tonyannmusic/featured" target="_blank">"iPhone alarm as a piano ballad" by Tony Ann<br>subscribe to his channel</a>`;
-    toggleMute();
+    setTimeout(toggleMute, 1000);
 }
 
 function toggleMute() {
