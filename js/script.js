@@ -78,8 +78,9 @@ function stopTimer(){
 }
 
 function playAlarm(){
-    player.innerHTML = `<audio autoplay controls loop playsinline><source src="./audio/alarm.mp3" type="audio/mpeg"></audio>`;
     document.getElementById("player").muted = false;
+    player.innerHTML = `<audio autoplay controls loop muted playsinline><source src="./audio/alarm.mp3" type="audio/mpeg"></audio>`;
+    
     credits.innerHTML = `<a href="https://www.youtube.com/@tonyannmusic/featured" target="_blank">"iPhone alarm as a piano ballad" by Tony Ann<br>subscribe to his channel</a>`;
 }
 
