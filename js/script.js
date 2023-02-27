@@ -86,6 +86,9 @@ function playAlarm() {
 function toggleMute() {
     var audioAlarm = document.getElementById("player2");
     audioAlarm.muted = !audioAlarm.muted;
+
+    var audioPlay = document.getElementById("player2");
+    audioPlay = autoplay;
 }
 
 
